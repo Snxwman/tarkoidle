@@ -1,4 +1,52 @@
 from enum import Enum
+from dataclasses import dataclass
+
+class WeaponType(Enum):
+    ASSAULT_CARBINE = "Assault Carbine"
+    ASSAULT_RIFLE = "Assault Rifle"
+    BOLT_ACTION = "Bolt-Action Rifle"
+    DMR = "Designated Marksman Rifle"
+    GL = "Grenade Launcher"
+    LMG = "Light Machine Gun"
+    ROCKET_LAUNCHER = "Rocket Launcher"
+    SHOTGUN = "Shotgun"
+    SMG = "Submachine Gun"
+
+class WeaponCaliber(Enum):
+    AMMO_9x19MM = "9x19mm Parabellum"
+    AMMO_5_45x39MM = "5.45x39mm"
+    AMMO_5_56x45MM = "5.56x45mm NATO"
+    AMMO_7_62x39MM = "7.62x39mm"
+    AMMO_7_62x51MM = "7.62x51mm NATO"
+    AMMO_12GAUGE = "12 Gauge"
+    AMMO_40MM = "40mm Grenade"
+    AMMO_4_6x30MM = "4.6x30mm"
+
+@dataclass
+class WeaponDataMixin:
+    rarity: str
+    name: str
+    type: str
+    description: str
+    durability: int
+    weight: int
+    ergonomics: int
+    accuracy: int
+    recoil: int
+    muzzle_velocity: int
+    types_of_fire: str
+    caliber: WeaponCaliber.AMMO_5_56x45MM
+    fire_rate: int
+    effective_distance: int
+
+class Weapon(WeaponDataMixin, Enum):
+    #Assault Carbines
+    ADAR_2_15 = "Common", "ADAR 2-15","Assault Carbine", 
+    "A reliable and versatile assault carbine.",
+    100, 3267, 60.5, 2.2, 84, 905, "Semi-Auto, Full-Auto", WeaponCaliber.AMMO_5_56x45MM, 800, 500
+
+
+
 #All Enum Classes for weapoons
 class WeaponName(Enum):
 
@@ -52,28 +100,30 @@ class WeaponName(Enum):
     #SHOTGUNS
 
     AA_12_GEN_1 = "AA-12 Gen1"
+    M870 = "M870"
+    MP_153 = "MP-153"
+    TOZ_106 = "TOZ-106"
+    SAIGA_12K = "Saiga-12K"
+
+    #SUBMACHINE GUNS
+
+    MP5 = "MP5"
+    MP7A1 = "MP7A1"
+    MP9 = "MP9"
+    VECTOR_45 = "Vector .45"
+    SR_2M = "SR-2M"
+
+    #SECONDARY WEAPONS
+
+    BLICKY = "Blicky"
+    GLOCK_18C = "Glock 18C" 
+    M1911A1 = "M1911A1"
+
+
+
     
 
 
 
 
-class WeaponType(Enum):
-    ASSAULT_CARBINE = "Assault Carbine"
-    ASSAULT_RIFLE = "Assault Rifle"
-    BOLT_ACTION = "Bolt-Action Rifle"
-    DMR = "Designated Marksman Rifle"
-    GL = "Grenade Launcher"
-    LMG = "Light Machine Gun"
-    ROCKET_LAUNCHER = "Rocket Launcher"
-    SHOTGUN = "Shotgun"
-    SMG = "Submachine Gun"
 
-class WeaponCaliber(Enum):
-    AMMO_9x19MM = "9x19mm Parabellum"
-    AMMO_5_45x39MM = "5.45x39mm"
-    AMMO_5_56x45MM = "5.56x45mm NATO"
-    AMMO_7_62x39MM = "7.62x39mm"
-    AMMO_7_62x51MM = "7.62x51mm NATO"
-    AMMO_12GAUGE = "12 Gauge"
-    AMMO_40MM = "40mm Grenade"
-    AMMO_4_6x30MM = "4.6x30mm"
