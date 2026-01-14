@@ -15,6 +15,7 @@ class WeaponType(Enum):
 
 class WeaponCaliber(Enum):
     AMMO_9x19MM = "9x19mm Parabellum"
+    AMMO_9x39MM = "9x39mm"
     AMMO_5_45x39MM = "5.45x39mm"
     AMMO_5_56x45MM = "5.56x45mm NATO"
     AMMO_7_62x39MM = "7.62x39mm"
@@ -49,21 +50,34 @@ class WeaponDataMixin:
 class Weapon(WeaponDataMixin, Enum):
     #Assault Carbines
     ADAR_2_15 = (ItemRarity.COMMON,"ADAR 2-15",WeaponType.ASSAULT_CARBINE, 
-    "A reliable and versatile assault carbine.",
+    "A cheap but versatile assault carbine.",
     100, 3267, 60.5, 2.2, 84, 905, [FireMode.SemiAuto], WeaponCaliber.AMMO_5_56x45MM, 800, 500)
+
+    VSK_94 = (ItemRarity.UNCOMMON,"VSK-94",WeaponType.ASSAULT_CARBINE, 
+    "A reliable and versatile assault carbine.",
+    100, 2992, 54, 4.37, 62, 246, [FireMode.SemiAuto, FireMode.FullAuto], WeaponCaliber.AMMO_9x39MM, 700, 400)
+
+    SR_3M = (ItemRarity.RARE,"SR-3M",WeaponType.ASSAULT_CARBINE, 
+    "A very reliable and versatile assault carbine.",
+    100, 2593, 70, 5.02, 59, 290, [FireMode.SemiAuto, FireMode.FullAuto], WeaponCaliber.AMMO_9x39MM, 900, 400)
+
+    LONE_STAR_TX_15_DML = (ItemRarity.LEGENDARY,"Lone star TX-15 DML",WeaponType.ASSAULT_CARBINE, 
+    "A very very reliable and versatile assault carbine.",
+    100, 3702, 34, 1.38, 56, 922, [FireMode.SemiAuto], WeaponCaliber.AMMO_5_56x45MM, 800, 500)
+
+    RFB = (ItemRarity.MYTHIC,"RFB",WeaponType.ASSAULT_CARBINE, 
+    "A very super reliable and versatile assault carbine.",
+    100, 3606, 50, 1.58, 136, 805, [FireMode.SemiAuto], WeaponCaliber.AMMO_7_62x51MM, 700, 900)
+
+    #Assualt Rifles
+    AK_74 = (ItemRarity.COMMON,"AK-74",WeaponType.ASSAULT_RIFLE, 
+    "A cheap but versatile assault rifle.",
+    100, 3320, 39, 1.99, 85, 906, [FireMode.SemiAuto, FireMode.FullAuto], WeaponCaliber.AMMO_5_45x39MM, 650, 650)
 
 
 
 #MOVE ALL THIS INTO THE DATA CLASS
 class WeaponName(Enum):
-
-    #ASSAULT CARBINES
-
-    OP_SKS = "OP-SKS"
-    RFB = "RFB"
-    SR_3M = "SR-3M"
-    VPO_101 = "VPO-101"
-    VSK_94 = "VSK-94"
 
     #ASSAULT RIFLES
 
