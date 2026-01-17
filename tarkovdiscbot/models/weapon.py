@@ -1,5 +1,5 @@
-import WeaponEnums
-from WeaponEnums import WeaponType, WeaponCaliber
+import tarkovdiscbot.enums.weapon as weapons
+from tarkovdiscbot.enums.weapon import WeaponType, WeaponCaliber
 
 
 class Weapon:

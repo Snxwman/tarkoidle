@@ -1,6 +1,6 @@
 from enum import Enum
 from dataclasses import dataclass
-from items import ItemRarity
+from tarkovdiscbot.enums.items import ItemRarity
 
 class WeaponType(Enum):
     ASSAULT_CARBINE = "Assault Carbine"
