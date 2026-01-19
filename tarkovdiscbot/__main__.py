@@ -1,10 +1,9 @@
-from tarkovdiscbot.models.weapon import Weapon
-from tarkovdiscbot.enums.weapon import WeaponType, WeaponCaliber
-from tarkovdiscbot.discord.bot import bot
+
+from tarkovdiscbot.discord.bot import TarkoIdleBot
+
 
 def main():
-    bot.run()
+    TarkoIdleBot().run()
 
-
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()
