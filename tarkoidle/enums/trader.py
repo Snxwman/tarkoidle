@@ -1,6 +1,6 @@
 from enum import Enum
 
-class Traders(Enum):
+class TraderVariant(Enum):
     PRAPOR = 'Prapor'
     THERAPIST = 'Therapist'
     FENCE = 'Fence'

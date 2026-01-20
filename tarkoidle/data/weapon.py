@@ -1,16 +1,17 @@
-from tarkoidle.models.inventory import GridSize
-from tarkoidle.enums.items import ItemCategory, ItemSlot, ItemRarity
-from tarkoidle.enums.traders import Traders
+from tarkoidle.enums.item import ItemCategory, ItemRarity, ItemSlot
+from tarkoidle.enums.trader import TraderVariant
 from tarkoidle.enums.weapon import FireMode, WeaponCaliber
-# category = enum
-# slot = enum
-# name = str
-# description = str
-# rarity = ItemRarity
-# weight = int
-# sold_by = enum
-# base_value = int
-# grid_size = enum
+from tarkoidle.models.inventory import GridSize
+
+# category: enum
+# slot: list[ItemSlot]
+# name: str
+# description: str
+# rarity: ItemRarity
+# weight: int
+# sold_by: enum
+# base_value: int
+# grid_size: enum
 # durability: int
 # ergonomics: int
 # accuracy: int
@@ -21,14 +22,14 @@ from tarkoidle.enums.weapon import FireMode, WeaponCaliber
 # fire_rate: int
 # effective_distance: int
 
-#Adar 215 Constant
+#Adar 215
 ADAR_2_15_CATEGORY = ItemCategory.WEAPON
 ADAR_2_15_SLOT = [ItemSlot.PRIMARY_WEAPON, ItemSlot.SECONDARY_WEAPON]
 ADAR_2_15_NAME = 'ADAR 2-15'
 ADAR_2_15_DESCRIPTION = 'A cheap but versitile carbine.'
 ADAR_2_15_RARITY = ItemRarity.COMMON
 ADAR_2_15_WEIGHT = 3267
-ADAR_2_15_SOLD_BY = Traders.SKIER
+ADAR_2_15_SOLD_BY = TraderVariant.SKIER
 ADAR_2_15_BASE_VALUE = 45333
 ADAR_2_15_GRID_SIZE = GridSize(height = 6, width = 2)
 ADAR_2_15_DURABILITY = 100000

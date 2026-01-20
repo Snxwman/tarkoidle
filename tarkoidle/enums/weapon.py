@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 from enum import Enum
 
-from tarkoidle.enums.items import ItemData
+from tarkoidle.enums.item import ItemVariantData
 
 
 class WeaponType(Enum):
@@ -44,7 +44,7 @@ class FireMode(Enum):
 
 
 @dataclass
-class WeaponData(ItemData):
+class WeaponData(ItemVariantData):
     # category = str
     # slot = str
     # name = str

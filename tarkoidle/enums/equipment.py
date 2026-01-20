@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 from enum import Enum
 
-from tarkoidle.enums.items import ItemRarity
+from tarkoidle.enums.item import ItemRarity
 
 
 class HelmetArmoredAreas(Enum):
